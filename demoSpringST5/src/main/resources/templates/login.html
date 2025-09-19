@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Login</title></head>
+<body>
+<h2>Đăng nhập</h2>
+<form th:action="@{/login}" method="post">
+    <div><input type="text" name="username" placeholder="Username"/></div>
+    <div><input type="password" name="password" placeholder="Password"/></div>
+    <button type="submit">Login</button>
+    <!-- Nếu bật CSRF thì thêm:
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    -->
+</form>
+<div th:if="${param.error}">Sai tài khoản hoặc mật khẩu</div>
+<div th:if="${param.logout}">Đã đăng xuất</div>
+</body>
+</html>
