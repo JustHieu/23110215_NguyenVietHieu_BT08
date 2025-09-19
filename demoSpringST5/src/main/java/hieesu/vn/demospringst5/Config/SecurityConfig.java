@@ -36,7 +36,7 @@ public class SecurityConfig {
             http.formLogin(form -> form
                     .loginPage("/login")              // GET /login -> templates/login.html
                     .loginProcessingUrl("/login")     // form POST tới /login
-                    .defaultSuccessUrl("/", true)     // đổi sang URL có thật của bạn nếu muốn
+                    .defaultSuccessUrl("/admin/categories/list", true)     // đổi sang URL có thật của bạn nếu muốn
                     .failureUrl("/login?error")
                     .permitAll()
             );

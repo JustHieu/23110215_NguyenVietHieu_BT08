@@ -13,6 +13,7 @@ import java.util.Date;
 @Entity
 @Table(name = "Products")
 public class ProductEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productId;
